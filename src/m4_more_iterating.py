@@ -555,7 +555,7 @@ def count_positive_sines(numbers):
 
 
 def run_test_sum_first_n():
-    """ Tests the   sum_first_n   function. """
+    """ Tests the   sum_first_n   function. """ 
     # ------------------------------------------------------------------
     # COMPLETED: 8. Implement this TEST function.
     #   It TESTS the  sum_first_n  function defined below.
