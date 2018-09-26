@@ -325,8 +325,15 @@ def draw_circles(window, points, radius, color):
       :type radius: int | float
       :type color: str
     """
+
+    for k in range(len(points)):
+        circle = rg.Circle(points[k], radius)
+        circle.fill_color = color
+        circle.attach_to(window)
+        window.render()
+
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # COMPLETED: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
