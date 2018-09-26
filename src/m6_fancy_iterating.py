@@ -13,8 +13,8 @@ is different from:
   -- LOOKING only at items AT even-numbered indices.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jasmine Scott.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -22,7 +22,7 @@ import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     # ------------------------------------------------------------------
-    # TODO: 2.  EXAMINE the  4  sequences immediately below
+    # COMPLETED: 2.  EXAMINE the  4  sequences immediately below
     #   this comment, and READ the instructions that follows them.
     #
     # When you have examined the 4 sequences below and understand how
@@ -48,8 +48,8 @@ def main():
     # ------------------------------------------------------------------
 
     run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
+    run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
+    run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_in_second_half(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
 #     run_test_print_items_that_are_strings(sequence1, sequence2, sequence3, sequence4)
@@ -354,14 +354,17 @@ def print_all_items_forwards(sequence):
        Point at (90, 25)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # COMPLETED: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
-
+    for k in range(len(sequence)):
+        print(sequence[k])
 
 # ----------------------------------------------------------------------
-# Iterating through the ENTIRE sequence, BACKWARDs.
+# Iterating through the ENTIRE sequence, BACKWARDS.
 # ----------------------------------------------------------------------
+
+
 def print_all_items_backwards(sequence):
     """
     Prints the items in the given sequence in the REVERSE of the order
@@ -376,15 +379,17 @@ def print_all_items_backwards(sequence):
        55
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # COMPLETED: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
-
-
+    for k in range(len(sequence)):
+        print(sequence[(len(sequence) - 1) - k])
 # ----------------------------------------------------------------------
 # Iterating through PART of a sequence:
 #   -- in this sample problem, every other item in the sequence.
 # ----------------------------------------------------------------------
+
+
 def print_items_at_odd_indices(sequence):
     """
     Prints the items at the odd-numbered indices in the given sequence,
@@ -398,15 +403,20 @@ def print_items_at_odd_indices(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # COMPLETED: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
+    for k in range(len(sequence)):
+        if k % 2 == 1:
+            print(sequence[k], 'is at index', k)
 
 # ----------------------------------------------------------------------
 # Iterating through PART of a sequence:
 #   -- in this sample problem, the second half.
 # ----------------------------------------------------------------------
+
+
 def print_items_in_second_half(sequence):
     """
     Prints the items in the second half of the given sequence.
